@@ -1,0 +1,129 @@
+/* reference: https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6 */
+
+html {
+  overflow-y: scroll;
+  background-color: #efeeee;
+  color: #efeeee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: repeat(6, auto);
+  grid-row-gap: 40px;
+  margin-top: 5vh;
+}
+
+.att {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  text-align: center;
+}
+
+.card1 {
+  width: 50vh;
+  height: 50vh;
+  text-align: center;
+
+  /* child grid settings */
+  display: grid;
+
+  /* border settings */
+  border-radius: 50%;
+  /* border-width: 1.5em;
+  border-style: solid;
+  border-color: #ffffff22; */
+  box-shadow: -6px -6px 16px #ffffffff, 6px 6px 16px 7px #d1cdc77f;
+
+  /* grid settings */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: center;
+  justify-self: center;
+}
+
+.inner-card {
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  box-shadow: -6px -6px 16px #ffffffff inset, 6px 6px 16px #d1cdc77f inset;
+
+  /* flexbox settings */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* grid settings */
+  align-self: center;
+  justify-self: center;
+}
+
+.card2 {
+  border-radius: 20px;
+  /* border-width: 1.5em;
+  border-style: solid;
+  border-color: #ffffff22; */
+  box-shadow: -6px -6px 16px #ffffffff, 6px 6px 16px 3px #d1cdc77f;
+
+  /* grid settings */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  align-self: center;
+  justify-self: center;
+}
+
+.action-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+
+  /* grid settings */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-self: center;
+  justify-self: center;
+}
+
+.button1 {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 20px;
+  padding: 20px;
+  border: none;
+  box-shadow: -6px -6px 16px #ffffffff, 6px 6px 16px 5px #d1cdc77f;
+
+  /* grid settings */
+  grid-column-start: 1;
+  grid-column-end: 2;
+  align-self: center;
+  justify-self: center;
+}
+
+.button2 {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 20px;
+  padding: 20px;
+  border: none;
+  box-shadow: -6px -6px 16px #ffffffff, 6px 6px 16px 5px #d1cdc77f;
+
+  /* grid settings */
+  grid-column-start: 2;
+  grid-column-end: 3;
+  align-self: center;
+  justify-self: start;
+}
