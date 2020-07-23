@@ -1,3 +1,5 @@
+/* reference: https://www.hongkiat.com/blog/css-gradient-border/ */
+
 html {
   overflow-y: scroll;
 }
@@ -114,7 +116,7 @@ body {
   width: 200px;
   height: 200px;
   background: #eee;
-  
+
   border-right: 20px solid #FFA500;
   border-left: 20px solid #3a4ed5;
   box-sizing: border-box;
