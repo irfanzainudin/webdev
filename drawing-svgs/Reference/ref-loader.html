@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="An SVG loader from https://webdesign.tutsplus.com/tutorials/how-to-create-a-loader-icon-with-svg-animations--cms-31542">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #logo {
+                position: fixed;
+                top: 30%;
+                left: 40%;
+                width: 400px;
+                height: 210px;
+                margin-left: -50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <svg width="51px" height="50px" viewBox="0 0 51 50" id="logo">
+ 
+                <rect y="0" width="13" height="50" fill="#1fa2ff">
+                    <animate attributeName="height" values="50;10;50" begin="0s" dur="1s" repeatCount="indefinite" />
+                </rect>
+             
+                <rect x="19" y="0" width="13" height="50" fill="#12d8fa">
+                    <animate attributeName="height" values="50;10;50" begin="0.2s" dur="1s" repeatCount="indefinite" />
+                </rect>
+             
+                <rect x="38" y="0" width="13" height="50" fill="#06ffcb">
+                    <animate attributeName="height" values="50;10;50" begin="0.4s" dur="1s" repeatCount="indefinite" />
+                </rect>
+             
+            </svg>
+        </div>
+    </body>
+</html>

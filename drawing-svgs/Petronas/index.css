@@ -1,0 +1,59 @@
+#logo {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    width: 400px;
+    height: 210px;
+    margin-left: -50px;
+}
+
+#drop {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 0;
+    animation: draw 2s alternate infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: 320;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#circle {
+  opacity: 0;
+  animation: fadeIn 2s ease-in alternate infinite;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1
+  }
+}
+
+/* #name {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 400px;
+    height: 210px;
+    margin-left: -50px;
+}
+
+#brand {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+    animation: write 2s ease-in alternate infinite;
+}
+
+@keyframes write {
+    from {
+        stroke-dashoffset: 200;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+} */

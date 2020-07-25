@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Luv</title>
+        <meta name="description" content="An SVG that I got from MDN">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_svg_scrolldrawing */
+            #logo {
+                position: fixed;
+                top: 20%;
+                left: 40%;
+                width: 400px;
+                height: 400px;
+                margin-left: -50px;
+            }
+
+            #love {
+                stroke-dasharray: 270;
+                stroke-dashoffset: 0;
+                animation: draw 3s linear alternate infinite;
+            }
+
+            @keyframes draw {
+                from {
+                    stroke-dashoffset: 270;
+                }
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d-->
+        <div style="width: 30%" id="logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    fill="none"
+                    stroke="red"
+                    id="love"
+                    d="M 50,30
+                       A 20,20 0,0,1 90,30
+                       Q 90,60 50,90
+                       M 50,30
+                       A 20,20 0,0,0 10,30
+                       Q 10,60 50,90"
+                />
+                <!-- M 10,30
+                A 20,20 0,0,1 50,30
+                A 20,20 0,0,1 90,30
+                Q 90,60 50,90
+                Q 10,60 10,30 z -->
+            </svg>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Animated Luv</title>
+        <meta name="description" content="An SVG that I got from MDN">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_svg_scrolldrawing */
+            body {
+                height: 2000px;
+            }
+            #logo {
+                position: fixed;
+                top: 20%;
+                left: 40%;
+                width: 400px;
+                height: 400px;
+                margin-left: -50px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d-->
+        <div style="width: 30%" id="logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    fill="none"
+                    stroke="red"
+                    id="love"
+                    d="M 50,30
+                       A 20,20 0,0,1 90,30
+                       Q 90,60 50,90
+                       M 50,30
+                       A 20,20 0,0,0 10,30
+                       Q 10,60 50,90"
+                />
+                <!-- M 10,30
+                A 20,20 0,0,1 50,30
+                A 20,20 0,0,1 90,30
+                Q 90,60 50,90
+                Q 10,60 10,30 z -->
+            </svg>
+        </div>
+
+        <script>
+                // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_svg_scrolldrawing
+                const hexa = document.getElementById('love');
+                const length = hexa.getTotalLength();
+    
+                // The start position of the drawing
+                hexa.style.strokeDasharray = length;
+    
+                // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+                hexa.style.strokeDashoffset = length;
+    
+                // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+                window.addEventListener("scroll", showLogo);
+    
+                function showLogo() {
+                    var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    
+                    var draw = length * scrollpercent;
+                    
+                    // Reverse the drawing (when scrolling upwards)
+                    hexa.style.strokeDashoffset = length - draw;
+                }
+            </script>
+    </body>
+</html>

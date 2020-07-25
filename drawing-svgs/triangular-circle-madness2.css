@@ -1,0 +1,16 @@
+#scavg {
+  width: 400px;
+  height: 210px;
+}
+
+.circle {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+}
+
+.lines {
+  /* stroke-dasharray: 100;
+  animation: stroke 2s ease-in alternate infinite; */
+  stroke-width: 1;
+}

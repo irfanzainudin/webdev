@@ -1,0 +1,49 @@
+.even {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+  animation: fadeOut 1s ease-in alternate infinite;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0
+  }
+}
+
+.even-lines {
+  stroke-width: 1;
+  animation: fadeOutLines 1s ease-in alternate infinite;
+}
+
+@keyframes fadeOutLines {
+  to {
+    opacity: 0
+  }
+}
+
+.odd {
+  fill: none;
+  stroke: black;
+  stroke-width: 1;
+  opacity: 0;
+  animation: fadeIn 1s ease-in alternate infinite;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1
+  }
+}
+
+.odd-lines {
+  stroke-width: 1;
+  opacity: 0;
+  animation: fadeInLines 1s ease-in alternate infinite;
+}
+
+@keyframes fadeInLines {
+  to {
+    opacity: 1
+  }
+}

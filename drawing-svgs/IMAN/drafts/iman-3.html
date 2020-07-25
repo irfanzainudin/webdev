@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>IMAN</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_svg_scrolldrawing */
+            body {
+                height: 2000px;
+            }
+
+            #logo {
+                position: fixed;
+                top: 30%;
+                left: 40%;
+                width: 400px;
+                height: 210px;
+                margin-left: -50px;
+            }
+
+            #name {
+                position: fixed;
+                top: 40%;
+                left: 40%;
+                width: 400px;
+                height: 210px;
+                margin-left: -50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <!--Start: 31/8/2019 7:35PM-->
+            <svg id="logo" viewBox="0 0 100 100" >
+                <path
+                    fill="none"
+                    stroke="#00d0da"
+                    stroke-width="1"
+                    id="hexagon"
+                    d=
+                    "
+                    M 50,10
+                    L 25,25
+                    V 55
+                    L 50,70
+                    M 50,10
+                    L 75,25
+                    V 55
+                    L 50,70
+                    M 50,10
+                    L 25,55
+                    M 50,10
+                    L 75,55
+                    M 50,70
+                    L 25,25
+                    M 50,70
+                    L 64,57
+                    V 35
+                    L 75,25
+                    M 64,35
+                    L 34,40
+                    L 65,57
+                    L 75,55
+                    "
+                    pathLength="1500"
+                />
+            </svg>
+            <svg id="name" viewbox="0 0 100 100">
+                <path
+                    fill="none"
+                    stroke="black"
+                    stroke-width="3"
+                    id="brand"
+                    d=
+                    "
+                    M 5,28
+                    V 50
+                    M 15,50
+                    V 49.5
+                    L 20,30
+                    L 30,48
+                    L 40,30
+                    L 45,50
+                    V 50.5
+                    M 55,50
+                    V 49.5
+                    L 65,30
+                    L 75,50
+                    V 50.5
+                    M 85,50
+                    V 30
+                    L 105,48
+                    V 28
+                    "
+                    pathLength="300"
+                />
+            </svg>
+        </div>
+
+        <script>
+            // <!--https://www.w3schools.com/howto/howto_js_scrolldrawing.asp-->
+            const hexa = document.getElementById('hexagon');
+            const length = hexa.getTotalLength();
+
+            // The start position of the drawing
+            hexa.style.strokeDasharray = length;
+
+            // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+            hexa.style.strokeDashoffset = length;
+
+            // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+            window.addEventListener("scroll", showLogo);
+
+            function showLogo() {
+                var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+                var draw = length * scrollpercent;
+                
+                // Reverse the drawing (when scrolling upwards)
+                hexa.style.strokeDashoffset = length - draw;
+            }
+        </script>
+        <script>
+                // <!--https://www.w3schools.com/howto/howto_js_scrolldrawing.asp-->
+                const iman = document.getElementById('brand');
+                const panjang = iman.getTotalLength();
+    
+                // The start position of the drawing
+                iman.style.strokeDasharray = panjang;
+    
+                // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
+                iman.style.strokeDashoffset = panjang;
+    
+                // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+                window.addEventListener("scroll", showName);
+    
+                function showName() {
+                    var scrollper = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    
+                    var dr = panjang * scrollper;
+                    
+                    // Reverse the drawing (when scrolling upwards)
+                    iman.style.strokeDashoffset = panjang - dr;
+                }
+        </script>
+    </body>
+</html>

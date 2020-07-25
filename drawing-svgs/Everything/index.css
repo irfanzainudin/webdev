@@ -1,0 +1,83 @@
+/***** Petronas *****/
+#petronas-logo {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 400px;
+    height: 210px;
+}
+
+#petronas-drop {
+    stroke-dasharray: 320;
+    stroke-dashoffset: 0;
+    animation: draw-drop 2s alternate infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes draw-drop {
+    from {
+        stroke-dashoffset: 320;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#petronas-circle {
+  opacity: 0;
+  animation: fadeIn-circle 2s ease-in alternate infinite;
+}
+
+@keyframes fadeIn-circle {
+  to {
+    opacity: 1
+  }
+}
+
+/***** TNB *****/
+#tnb-logo {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    width: 400px;
+    height: 210px;
+}
+
+#tnb-icon {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 0;
+    animation: draw-icon 2s ease-in alternate infinite;
+}
+
+@keyframes draw-icon {
+    from {
+        stroke-dashoffset: 300;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* #tnb-name {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 400px;
+    height: 210px;
+    margin-left: -50px;
+}
+
+#tnb-brand {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 0;
+    animation: write-brand 2s ease-in alternate infinite;
+}
+
+@keyframes write-brand {
+    from {
+        stroke-dashoffset: 200;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+} */

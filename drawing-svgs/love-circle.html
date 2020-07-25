@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Love Circle</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="love-circle.css" />
+    </head>
+    <body>
+        <div class="container">
+          <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="25" r="10" id="circle" />
+            <!-- top to bottom -->
+            <line x1="50" y1="15" x2="50" y2="25" stroke="black" class="lines" />
+            <!-- bottom to top -->
+            <line x1="50" y1="35" x2="50" y2="29" stroke="black" class="lines" />
+            <!-- left to right -->
+            <line x1="40" y1="25" x2="47" y2="25" stroke="black" class="lines" />
+            <!-- right to left -->
+            <line x1="60" y1="25" x2="53" y2="25" stroke="black" class="lines" />
+            <!-- top-left to bottom-right -->
+            <line x1="43" y1="18" x2="48" y2="24" stroke="black" class="lines" />
+            <!-- bottom-right to top-left -->
+            <line x1="57" y1="32" x2="52" y2="27.5" stroke="black" class="lines" />
+            <!-- bottom-left to top-right -->
+            <line x1="43" y1="32" x2="48" y2="27.5" stroke="black" class="lines" />
+            <!-- top-right to bottom-left -->
+            <line x1="57" y1="18" x2="52" y2="24" stroke="black" class="lines" />
+            <path d="M 47,25
+               A 1,1 0,0,1 50,25
+               A 1,1 0,0,1 53,25
+               Q 53,28 50,29
+               Q 47,28 47,25 z"
+               id="love"
+               fill="#ffc0ff"
+               fill-opacity=0
+               stroke="black"
+            />
+          </svg>
+        </div>
+    </body>
+</html>
