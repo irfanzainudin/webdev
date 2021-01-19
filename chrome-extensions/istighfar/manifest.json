@@ -1,0 +1,14 @@
+{
+  "name": "Istighfar",
+  "version": "1.0",
+  "description": "Have you made istighfar today?",
+  "permissions": ["webNavigation"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "chrome_url_overrides": {
+    "newtab": "istighfar.html"
+  },
+  "manifest_version": 2
+}
