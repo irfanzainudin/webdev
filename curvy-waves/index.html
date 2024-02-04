@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Space Grotesk", sans-serif;
+            color: white;
+            background: #202731;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 350px;
+            padding: 100px 20vw;
+        }
+
+        .blue {
+            background: #3c31dd;
+        }
+
+        .red {
+            background: #dd3f31;
+        }
+
+        .pink {
+            background: #ff0044;
+        }
+
+        .dark {
+            background: #0f0f10;
+        }
+
+        /* Curved bg with plain CSS */
+
+        .curve {
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .curve::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            transform: translate(85%, 60%);
+            background-color: hsl(216, 21%, 16%);
+        }
+
+        .curve::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #3c31dd;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 147px;
+        }
+
+        .wave .shape-fill {
+            fill: #202731;
+        }
+
+        /** For mobile devices **/
+        @media (max-width: 767px) {
+            .wave svg {
+                width: calc(100% + 1.3px);
+                height: 500px;
+            }
+        }
+
+        .first-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: rotate(180deg);
+        }
+
+        .first-wave svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 147px;
+        }
+
+        .first-wave .shape-fill {
+            fill: #202731;
+        }
+
+        /** For mobile devices **/
+        @media (max-width: 767px) {
+            .first-wave svg {
+                width: calc(100% + 1.3px);
+                height: 500px;
+            }
+        }
+
+        .spacer {
+            aspect-ratio: 960/300;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .layer1 {
+            background-image: url('./layer1.svg');
+        }
+
+        .layer2 {
+            background-image: url('./layer2.svg');
+        }
+
+        .layer3 {
+            background-image: url('./layer3.svg');
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+
+        .blob-motion {
+            position: absolute;
+            transform: translateY(-20%);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="blue">
+        <h1>Nice curves</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ad recusandae dicta, ratione praesentium sunt
+            beatae explicabo ipsum totam blanditiis dolorem quam non labore dignissimos? Ipsam tempora ad facilis
+            consequuntur?</p>
+        <!-- <div class="curve"></div> -->
+        <div class="first-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Ad quae tempora maiores asperiores debitis sapiente iure vitae tempore rerum molestias incidunt at explicabo
+            necessitatibus, quo aspernatur cupiditate sint numquam quisquam veritatis voluptatibus enim, repellat ab
+            velit facilis! Reiciendis.</p>
+    </section>
+    <section class="red">
+        <h1>Nice curves</h1>
+        <p>Error eligendi quisquam deserunt quasi perspiciatis recusandae debitis, adipisci labore totam saepe veniam
+            ducimus ut repellendus, repudiandae facilis dignissimos ea. Ex rem ullam omnis odio eveniet voluptatem
+            laborum a consectetur!</p>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <div class="spacer layer1"></div>
+    <section class="dark">
+        <h1>Nice curves</h1>
+        <p>Veniam omnis, quis nam amet maiores voluptatibus molestias reprehenderit incidunt corporis qui, vel dolorum,
+            voluptates architecto. Saepe assumenda repudiandae maxime nesciunt quidem architecto est consequuntur.
+            Placeat fugit qui nemo deleniti.</p>
+    </section>
+    <div class="spacer layer3"></div>
+    <div class="spacer layer2 flip"></div>
+    <section class="pink">
+        <h1>Nice curves</h1>
+        <p>Delectus velit vero hic porro error impedit tempora similique iusto? Dignissimos numquam, totam rerum optio
+            magni perspiciatis atque similique saepe iure culpa ipsa dolores, quos ut dolore fugiat ex sint?</p>
+        <svg id="visual" viewBox="0 0 960 300" width="960" height="300" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+            <g transform="translate(468.74917011939755 143.81230385122308)">
+                <path id="blob1"
+                    d="M90.4 -87.5C110 -70.7 114 -35.4 109.2 -4.8C104.4 25.7 90.7 51.4 71 72C51.4 92.7 25.7 108.4 -4.6 113C-34.9 117.6 -69.8 111.1 -82.3 90.4C-94.8 69.8 -84.9 34.9 -83.5 1.4C-82.1 -32.1 -89.1 -64.1 -76.6 -80.9C-64.1 -97.8 -32.1 -99.4 1.6 -101C35.4 -102.7 70.7 -104.4 90.4 -87.5"
+                    fill="#BB004B"></path>
+            </g>
+            <g transform="translate(460.35594903347646 168.99768763355667)" style="visibility: hidden">
+                <path id="blob2"
+                    d="M76.4 -73.9C101.4 -51.4 125.7 -25.7 126.6 0.9C127.6 27.6 105.2 55.2 80.2 67.7C55.2 80.2 27.6 77.6 2.8 74.8C-21.9 71.9 -43.8 68.8 -59.8 56.3C-75.8 43.8 -85.9 21.9 -87.2 -1.3C-88.5 -24.5 -81 -49 -65 -71.5C-49 -94 -24.5 -114.5 0.6 -115.1C25.7 -115.7 51.4 -96.4 76.4 -73.9"
+                    fill="#BB004B"></path>
+            </g>
+            <g transform="translate(495.1615541222702 163.14830247671281)" style="visibility: hidden">
+                <path id="blob3"
+                    d="M58.2 -68.1C70.7 -45.7 72.9 -22.9 79.1 6.2C85.4 35.4 95.7 70.7 83.2 83.5C70.7 96.4 35.4 86.7 2 84.7C-31.3 82.7 -62.7 88.4 -84.9 75.5C-107 62.7 -120 31.3 -119.4 0.6C-118.8 -30.2 -104.7 -60.3 -82.5 -82.7C-60.3 -105 -30.2 -119.5 -3.7 -115.8C22.9 -112.2 45.7 -90.4 58.2 -68.1"
+                    fill="#BB004B"></path>
+            </g>
+        </svg>
+        <script>
+            const tween = KUTE.fromTo(
+                '#blob1',
+                { path: '#blob1' },
+                { path: '#blob2' },
+                { repeat: 999, duration: 3000, yoyo: true }
+            )
+
+            tween.start()
+        </script>
+    </section>
+    <div class="spacer layer2"></div>
+    <section>
+        <h1>Nice curves</h1>
+        <p>Odit sint architecto id, a ipsam eaque voluptatem atque ipsa quasi culpa sunt voluptatum? Beatae illum atque
+            sit consectetur corrupti consequuntur odio molestias amet accusantium harum, numquam dolore ratione hic.</p>
+    </section>
+</body>
+
+</html>
